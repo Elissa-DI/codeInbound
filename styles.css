@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+  }
+  .container {
+    width: 75%;
+    height: 70vh;
+    background-color: rgb(71, 109, 109);
+    margin: 100px 0px 0px 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px;
+  }
+  .heading {
+    margin: 20px 0px 0px 130px;
+  }
+  .questionDiv {
+    margin: 60px 0px 0px 120px;
+  }
+  .rate {
+    margin: 30px 0px 0px 130px;
+  }
+  .rate button {
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+  .lastBtns {
+    margin: 50px 0px 0px 110px;
+  }
+  .lastBtns button{
+    width: 120px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 0 2px;
+    color: white;
+    cursor: pointer;
+  }
+  .prevBtn {
+    float: left;
+    background-color: blue;
+    margin-right: 5px;
+  }
+  .nextBtn {
+    background-color: rgb(241, 83, 110);
+  }
+  .pagination {
+    float: right;
+  }
