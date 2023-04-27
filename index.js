@@ -28,13 +28,13 @@ const questions = [
     },
   ];
 
-  let currentQuestion = 0;
+let currentQuestion = 0;
 
-  function updateQuestion() {
+function updateQuestion() {
     questionp.innerText = questions[currentQuestion].question;
     currentQuestionSpan.innerText = currentQuestion + 1;
     rateDiv.innerHTML = "";
-  }
+
     if(questions[currentQuestion].input) {
         const input = document.createElement("input");
         input.type = "text";
@@ -46,22 +46,22 @@ const questions = [
             const button = document.createElement("button");
             button.innerText = i;
             rateDiv.appendChild(button);
-          
         }
     }
+}
 
-    nextBtn.addEventListener("click", () => {
-        if (currentQuestion < questions.length - 1) {
-          currentQuestion++;
-          updateQuestion();
-        }
-      });
-      
-      prevBtn.addEventListener("click", () => {
-        if (currentQuestion > 0) {
-          currentQuestion--;
-          updateQuestion();
-        }
-      });
-      
-      updateQuestion();
+nextBtn.addEventListener("click", () => {
+    if (currentQuestion < questions.length - 1) {
+        currentQuestion++;
+        updateQuestion();
+    }
+});
+
+prevBtn.addEventListener("click", () => {
+    if (currentQuestion > 0) {
+        currentQuestion--;
+        updateQuestion();
+    }
+});
+
+updateQuestion();
