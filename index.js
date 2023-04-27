@@ -49,3 +49,19 @@ const questions = [
           
         }
     }
+
+    nextBtn.addEventListener("click", () => {
+        if (currentQuestion < questions.length - 1) {
+          currentQuestion++;
+          updateQuestion();
+        }
+      });
+      
+      prevBtn.addEventListener("click", () => {
+        if (currentQuestion > 0) {
+          currentQuestion--;
+          updateQuestion();
+        }
+      });
+      
+      updateQuestion();
