@@ -36,15 +36,21 @@ function updateQuestion() {
     rateDiv.innerHTML = "";
 
     if(questions[currentQuestion].input) {
-        const input = document.createElement("input");
-        input.type = "text";
-        input.name = "answer";
-        input.required = true;
-        rateDiv.appendChild(input);
+        const text = document.createElement("textarea");
+        text.rows = 4;
+        text.cols = 40;
+        text.required = true;
+        rateDiv.appendChild(text);
     } else {
         for (let i = 1; i <= questions[currentQuestion].buttons; i++) {
             const button = document.createElement("button");
             button.innerText = i;
+            button.addEventListener("click", () => {
+                rateDiv.querySelectorAll("button").forEach((btn) => {
+                    btn.classList.remove("blue");
+                  });
+                  button.classList.add("blue");
+            })
             rateDiv.appendChild(button);
         }
     }
