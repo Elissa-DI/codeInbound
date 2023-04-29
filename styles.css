@@ -4,6 +4,14 @@
     box-sizing: border-box;
     font-family: cursive;
   }
+  body{
+    overflow: hidden;
+  }
+  .all {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh !important;
+  }
   .container {
     display: none;
     width: 75%;
@@ -13,7 +21,7 @@
     border-radius: 10px;
     box-shadow: 0 0 5px;
   }
-  /* .heading {
+  .heading {
     margin: 20px 0px 0px 130px;
   }
   .questionDiv {
@@ -60,11 +68,12 @@
     width: 380px;
     height: 50px;
     box-shadow: 0px 0px 3px
-  } */
+  } 
+  .hide {
+    display: none;
+  }
 
-  /* //First Div */
-
-  /* .start img {
+  .start img {
     margin: 20px;
   }
 section {
@@ -73,15 +82,20 @@ section {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #250821;
-} */
-/*Blob*/
-
- /* .blob {
+}
+.top {
+    float: right;
+    margin: -200px 200px 0px 0px;
+}
+.bottom {
+    float: left;
+    margin: 0px 0px 500px 200px;
+}
+ .blob {
   position: absolute;
   width: 500px;
   height: 500px;
-  background: #f1c40f; 
+ /* background: #f1c40f; */
  border-radius: 50% / 60%;
  animation: blob 2s ease-in-out infinite;
 }
@@ -96,4 +110,52 @@ section {
   100% {
     transform: scale(1);
   }
-}   */
+}  
+
+.animated-text h1,
+.animated-text h2 {
+  position: relative;
+  margin: 50px 0px 0px 10px;
+}
+
+.animated-text h1::before,
+.animated-text h2::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.animated-text h1::before {
+  animation-name: slide-in-top;
+}
+
+.animated-text h2::before {
+  animation-name: slide-in-left;
+}
+
+@keyframes slide-in-top {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+

@@ -7,15 +7,14 @@ section {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* background: #250821; */
 }
 .top {
     float: right;
-    margin: -200px 80px 0px 0px;
+    margin: -200px 200px 0px 0px;
 }
 .bottom {
     float: left;
-    margin: 240px 0px 30px 0px;
+    margin: 0px 0px 500px 200px;
 }
  .blob {
   position: absolute;
@@ -37,3 +36,51 @@ section {
     transform: scale(1);
   }
 }  
+
+.animated-text h1,
+.animated-text h2 {
+  position: relative;
+  margin: 50px 0px 0px 10px;
+}
+
+.animated-text h1::before,
+.animated-text h2::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.animated-text h1::before {
+  animation-name: slide-in-top;
+}
+
+.animated-text h2::before {
+  animation-name: slide-in-left;
+}
+
+@keyframes slide-in-top {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+

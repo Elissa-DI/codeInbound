@@ -71,3 +71,12 @@ prevBtn.addEventListener("click", () => {
 });
 
 updateQuestion();
+
+const startDiv = document.querySelector('.start');
+const containerDiv = document.querySelector('.container');
+const startContBtn = document.querySelector('.startCont');
+
+startContBtn.addEventListener('click', function() {
+  startDiv.classList.add('hide');
+  containerDiv.classList.remove('container');
+});
