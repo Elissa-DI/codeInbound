@@ -1,0 +1,39 @@
+.start img {
+    margin: 20px;
+  }
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: #250821; */
+}
+.top {
+    float: right;
+    margin: -200px 80px 0px 0px;
+}
+.bottom {
+    float: left;
+    margin: 240px 0px 30px 0px;
+}
+ .blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+ /* background: #f1c40f; */
+ border-radius: 50% / 60%;
+ animation: blob 2s ease-in-out infinite;
+}
+
+@keyframes blob {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}  
