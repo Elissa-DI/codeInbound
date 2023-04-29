@@ -95,7 +95,6 @@ section {
   position: absolute;
   width: 500px;
   height: 500px;
- /* background: #f1c40f; */
  border-radius: 50% / 60%;
  animation: blob 2s ease-in-out infinite;
 }
